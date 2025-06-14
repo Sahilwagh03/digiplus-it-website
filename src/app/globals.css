@@ -1,26 +1,54 @@
 @import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+  font-family: 'Kassiclassic';
+  src: url('https://cdn.prod.website-files.com/666816b02d4f3deb68a0d625/6668893993747a31b278a70c_KassiClassic.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@font-face {
+  font-family: 'Urbanist';
+  src: url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+  font-family: 'Aktivgrotesk';
+  src: url('https://cdn.prod.website-files.com/666816b02d4f3deb68a0d625/66688979b500c07cc6722831_AktivGrotesk-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@font-face {
+  font-family: 'Aktivgrotesk';
+  src: url('https://cdn.prod.website-files.com/666816b02d4f3deb68a0d625/66688979c4054952a579f6fe_AktivGrotesk-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aktivgrotesk';
+  src: url('https://cdn.prod.website-files.com/666816b02d4f3deb68a0d625/666ab3862bc41bb2eac57814_AktivGrotesk-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Tailwind 4.1 @theme block */
+@theme {
+  --font-primary:  'Kassiclassic',Impact,sans-serif;
+  --font-secondary: 'Urbanist','sans-serif';
+
+  --color-primary-blue: #3d82f4;
+  --color-primary-red: #ea4234;
+  --color-primary-green: #39a853;
+}
+
+html {
+  font-family: var(--font-primary);
 }
