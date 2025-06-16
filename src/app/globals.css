@@ -132,6 +132,16 @@ h2 {
   margin-bottom: 0;
 }
 
+h3{
+    letter-spacing: -.01em;
+    font-weight: 400;
+    line-height: 1.125;
+    font-size: clamp(1.5rem, calc(1rem + 3vw), 3rem);
+    text-wrap: balance;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 .wrapper-hero-content {
   z-index: 3;
   grid-column-gap: 1rem;
@@ -190,4 +200,11 @@ h2 {
       #3d82f4 90%);
   color: white;
   height: 100%;
+}
+
+li{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    line-height: 1.2;
+    text-wrap: pretty;
 }
