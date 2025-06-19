@@ -7,7 +7,7 @@ const ImageCarousel = () => {
   const repeatedPartners = [...partners, ...partners, ...partners, ...partners]; // repeat for loop
 
   return (
-    <div className="overflow-hidden whitespace-nowrap py-10 select-none">
+    <div className="overflow-hidden whitespace-nowrap pt-5 lg:py-10 select-none">
       <div className="animate-carousel inline-flex items-center">
         {repeatedPartners.map((partner, index) => (
           <div
