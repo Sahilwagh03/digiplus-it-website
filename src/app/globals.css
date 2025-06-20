@@ -65,9 +65,9 @@
   display: flex;
 }
 
-main {
+/* main {
   overflow-x: hidden;
-}
+} */
 
 .nav-menu {
   padding-right: 1rem;
@@ -190,11 +190,11 @@ h3 {
 }
 
 .gradient {
-  padding-top: var(--t-padding--top-section-desktop);
-  padding-bottom: var(--t-padding--medium);
-  background-color: var(--color-primary-blue);
-  background-image: radial-gradient(circle closest-corner at 100% 50%, #ff6700 3%, var(--color-primary-blue) 94%);
-  color: var(--color-primary-blue);
+  background-image: radial-gradient(
+    circle farthest-corner at 0% 0%,
+    var(--color-primary-blue) 40%,
+    #ff660090 90%
+  );
   color: white;
   height: 100%;
 }

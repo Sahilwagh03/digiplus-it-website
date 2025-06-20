@@ -1,12 +1,12 @@
 import React from 'react'
-import AnimatedExpertiseSection from './AnimatedExpertiseSection '
+import AIBentoGrid from './AIBentoGrid'
 
 type Props = {}
 
 const HowWeOperate = (props: Props) => {
   return (
     <section className='gradient h-auto'>
-      <AnimatedExpertiseSection/>
+      <AIBentoGrid/>
     </section>
   )
 }
