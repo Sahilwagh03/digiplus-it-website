@@ -4,20 +4,21 @@ import ContentLayout from '@/components/ContentLayout';
 import { getContentBySlug, getAllSlugs } from '@/lib/mdx';
 
 interface BlogPostPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
-export async function generateStaticParams() {
-  const slugs = await getAllSlugs('blog');
+export function generateStaticParams() {
+  const slugs = getAllSlugs('blog');
   return slugs.map((slug) => ({
     slug,
   }));
 }
 
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
-  const content = await getContentBySlug(params.slug, 'blog');
+  const { slug } = await params;
+  const content = await getContentBySlug(slug, 'blog');
   
   if (!content) {
     return {
@@ -37,7 +38,8 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
-  const content = await getContentBySlug(params.slug, 'blog');
+  const { slug } = await params;
+  const content = await getContentBySlug(slug, 'blog');
 
   if (!content) {
     notFound();
