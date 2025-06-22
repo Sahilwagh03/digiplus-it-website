@@ -4,9 +4,9 @@ import ContentLayout from '@/components/ContentLayout';
 import { getContentBySlug, getAllSlugs } from '@/lib/mdx';
 
 interface CaseStudyPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export function generateStaticParams() {
@@ -17,7 +17,8 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: CaseStudyPageProps): Promise<Metadata> {
-  const content = await getContentBySlug(params.slug, 'case-study');
+  const { slug } = await params;
+  const content = await getContentBySlug(slug, 'case-study');
   
   if (!content) {
     return {
@@ -37,7 +38,8 @@ export async function generateMetadata({ params }: CaseStudyPageProps): Promise<
 }
 
 export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
-  const content = await getContentBySlug(params.slug, 'case-study');
+  const { slug } = await params;
+  const content = await getContentBySlug(slug, 'case-study');
 
   if (!content) {
     notFound();
