@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@layer theme, base, components, utilities;
+
 @font-face {
   font-family: 'Kassiclassic';
   src: url('https://cdn.prod.website-files.com/666816b02d4f3deb68a0d625/6668893993747a31b278a70c_KassiClassic.otf') format('opentype');
@@ -41,14 +43,196 @@
 
 /* Tailwind 4.1 @theme block */
 @theme {
-  --font-primary:  'Kassiclassic',Impact,sans-serif;
-  --font-secondary: 'Urbanist','sans-serif';
+  --font-primary: 'Kassiclassic', Impact, sans-serif;
+  --font-secondary: 'Urbanist', 'sans-serif';
+  --font-third: Arial, Helvetica, sans-serif;
 
   --color-primary-blue: #3d82f4;
   --color-primary-red: #ea4234;
   --color-primary-green: #39a853;
+  --color-blue-variant: #e8f2ff;
 }
 
-html {
-  font-family: var(--font-primary);
+/* Line clamp utilities */
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.line-clamp-4 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+
+.container-nav {
+  padding: 0.6rem;
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1248px;
+  display: flex;
+}
+
+/* main {
+  overflow-x: hidden;
+} */
+
+.nav-menu {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  flex: 0 auto;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  display: flex;
+}
+
+.wrapper-right-nav {
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 1.5rem;
+  flex: 1;
+  justify-content: flex-end;
+  align-items: center;
+  display: flex;
+}
+
+.wrapper-nav-link-1 {
+  grid-column-gap: .2em;
+  grid-row-gap: .2em;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.wrapper-local-mobil,
+.wrapper-nav-link-2 {
+  display: none;
+}
+
+.w-nav-link {
+  vertical-align: top;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  display: inline-block;
+}
+
+.nav-link {
+  padding: 0.5rem;
+  white-space: nowrap;
+  word-break: keep-all;
+}
+
+.w-nav-brand,
+.w-nav-link {
+  text-decoration: none;
+  position: relative;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: .875;
+  font-size: clamp(2.5rem, calc(1rem + 6vw), 5rem);
+  text-wrap: pretty;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h3 {
+  letter-spacing: -.01em;
+  font-weight: 400;
+  line-height: 1.125;
+  font-size: clamp(1.5rem, calc(1rem + 3vw), 3rem);
+  text-wrap: balance;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.wrapper-hero-content {
+  z-index: 3;
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  flex-flow: column;
+  grid-template-rows: auto auto;
+  width: 100%;
+  display: grid;
+  position: relative;
+}
+
+.w-layout-blockcontainer {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.container-1280 {
+  z-index: 2;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  max-width: 1280px;
+  height: 100%;
+  position: relative;
+}
+
+.page-wrapper {
+  height: 100%;
+  margin-top: -6rem;
+  overflow-x: clip;
+}
+
+@keyframes carousel {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-carousel {
+  animation: carousel 40s linear infinite;
+}
+
+.gradient {
+  background-image: radial-gradient(
+    circle farthest-corner at 0% 0%,
+    var(--color-primary-blue) 40%,
+    #ff660090 90%
+  );
+  color: white;
+  height: 100%;
+}
+
+.active p{
+  color:#fff
+}
+
+li {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  line-height: 1.2;
+  text-wrap: pretty;
 }

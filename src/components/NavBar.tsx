@@ -1,74 +1,103 @@
+'use client';
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
+import { BiDotsVertical } from 'react-icons/bi';
+import { IoCloseSharp } from 'react-icons/io5';
 
 type Props = {};
 
+const navLinks = [
+  { href: '#clients', label: 'Clients' },
+  { href: '#expertise', label: 'Expertise' },
+  { href: '#solutions', label: 'Solutions' },
+  { href: '#about-us', label: 'About us' },
+  { href: '#partners', label: 'Partners' },
+];
+
 const NavBar = (props: Props) => {
-    return (
-        <div className="nav-bar w-nav">
-            <div className="container-nav w-container">
-                <div className="wrapper-nav-left">
-                    <Link href="#top-of-the-page">
-                        <div className="flex flex-row items-center">
-                            <h3 className="text-5xl text-primary-red">DIGI</h3>
-                            <h3 className="text-5xl text-primary-blue">PLUS</h3>
-                            <h3 className="text-5xl bg-primary-green text-white px-1 ml-1">IT</h3>
-                        </div>
-                    </Link>
-                </div>
-                <nav role="navigation" className="nav-menu w-nav-menu">
-                    <div className="wrapper-nav-link-1">
-                        <Link href="#clients" className="text-lg nav-link w-nav-link">Clients</Link>
-                        <Link href="#expertise" className="text-lg nav-link w-nav-link">Expertise</Link>
-                        <Link href="#solutions" className="text-lg nav-link w-nav-link">Solutions</Link>
-                        <Link href="#about-us" className="text-lg nav-link w-nav-link">About us</Link>
-                        <Link href="#partners" className="text-lg nav-link w-nav-link">Partners</Link>
-                        <Link data-w-id="1fbcdb53-0d91-fef6-471a-1a46d60013c1" href="#" className="text-lg nav-link is-contact w-nav-link">Contact</Link>
-                    </div>
-                    <div className="wrapper-nav-link-2">
-                        <Link href="/en/informations-legales" className="nav-link is-second">Legal information</Link>
-                        <Link href="/en/politique-de-confidentialite" className="nav-link is-second">Data protection policy</Link>
-                        <Link href="https://www.michaelbernard.fr/" target="_blank" rel="noopener noreferrer" className="nav-link is-second">Developed by Michaël Bernard</Link>
-                    </div>
-                </nav>
-                <div className="wrapper-right-nav">
-                    <Link data-w-id="3cc77861-1302-a5d0-5ead-b82a16f89027" href="#" className="text-lg nav-contact">Contact</Link>
-                </div>
-                <div
-                    className="menu-button w-nav-button"
-                    aria-label="menu"
-                    role="button"
-                    aria-controls="w-nav-overlay-0"
-                    aria-haspopup="menu"
-                    aria-expanded="false"
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <>
+      {/* Top Nav */}
+      <div className="z-[996] top-0 lg:top-4 lg:px-4 sticky [inset:1rem_0_auto] bg-transparent">
+        <div className="p-4 lg:p-0 bg-white lg:bg-[#ffffffb3] container-nav mx-auto flex items-center justify-between
+          lg:clip-path-[polygon(0_0,100%_0,100%_calc(100%-1.5rem),calc(100%-1.5rem)_100%,0_100%)] 
+          lg:[-webkit-clip-path:polygon(0_0,100%_0,100%_calc(100%-1.5rem),calc(100%-1.5rem)_100%,0_100%)]"
+        >
+          {/* Logo */}
+          <div className="flex-1">
+            <Link href="/">
+              <div className="flex items-center">
+                <h3 className="font-primary text-5xl text-primary-red">DIGI</h3>
+                <h3 className="font-primary text-5xl text-primary-blue">PLUS</h3>
+                <h3 className="font-primary text-5xl bg-primary-green text-white px-1 ml-1">IT</h3>
+              </div>
+            </Link>
+          </div>
+
+          {/* Desktop Nav */}
+          <nav className="hidden lg:flex px-4 flex-auto justify-center items-center font-normal relative">
+            <div className="font-third wrapper-nav-link-1 flex gap-x-6">
+              {navLinks.map(({ href, label }) => (
+                <Link
+                  key={href}
+                  href={href}
+                  className="text-lg nav-link w-nav-link hover:text-primary-blue transition-colors duration-200 ease-in-out"
                 >
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="8"
-                        height="40"
-                        viewBox="0 0 8 40"
-                        fill="none"
-                        className="burger"
-                    >
-                        <rect y="32" width="8" height="8" fill="var(--u-color--primary-blue)"></rect>
-                        <rect width="8" height="8" fill="var(--u-color--primary-blue)"></rect>
-                        <rect y="16" width="8" height="8" fill="var(--u-color--primary-blue)"></rect>
-                    </svg>
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="34"
-                        height="34"
-                        viewBox="0 0 34 34"
-                        fill="none"
-                        className="close"
-                    >
-                        <rect y="28.3137" width="40" height="8" transform="rotate(-45 0 28.3137)" fill="var(--u-color--primary-blue)"></rect>
-                        <rect x="5.66016" y="0.029541" width="40" height="8" transform="rotate(45 5.66016 0.029541)" fill="currentColor"></rect>
-                    </svg>
-                </div>
+                  {label}
+                </Link>
+              ))}
             </div>
+          </nav>
+
+          {/* Desktop Contact */}
+          <div className="hidden lg:flex flex-1 justify-end items-center gap-x-6 mr-2">
+            <Link href="#" className="text-lg hover:text-primary-blue transition-colors duration-200 ease-in-out">
+              Contact
+            </Link>
+          </div>
+
+          {/* Mobile Menu Toggle */}
+          <div className="lg:hidden flex justify-center items-center z-[1000]">
+            <button onClick={() => setIsOpen(!isOpen)} className="text-4xl text-primary-blue">
+              {isOpen ? <IoCloseSharp /> : <BiDotsVertical />}
+            </button>
+          </div>
         </div>
-    );
+      </div>
+
+      {/* Mobile Menu (Always Mounted) */}
+      <div
+        className={`
+          fixed top-0 left-0 w-full h-screen bg-primary-blue z-[995] 
+          flex flex-col items-start justify-start pt-24 px-6
+          transition-all duration-300 ease-in-out
+          ${isOpen ? 'translate-x-0 opacity-100 pointer-events-auto' : 'translate-x-full opacity-0 pointer-events-none'}
+        `}
+      >
+        <nav className="flex flex-col w-full gap-y-6 text-left font-third">
+          {navLinks.map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              className="text-2xl md:text-3xl text-white transition duration-200"
+              onClick={() => setIsOpen(false)}
+            >
+              {label}
+            </Link>
+          ))}
+          <Link
+            href="#"
+            className="text-2xl md:text-3xl text-white transition duration-200"
+            onClick={() => setIsOpen(false)}
+          >
+            Contact
+          </Link>
+        </nav>
+      </div>
+    </>
+  );
 };
 
 export default NavBar;
