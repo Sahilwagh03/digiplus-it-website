@@ -64,7 +64,7 @@ export async function getRecentContent(type: 'blog' | 'case-study', limit: numbe
   return allContent.slice(0, limit);
 }
 
-export async function getAllSlugs(type: 'blog' | 'case-study'): Promise<string[]> {
+export function getAllSlugs(type: 'blog' | 'case-study'): string[] {
   const typeDirectory = path.join(contentDirectory, type);
   
   try {

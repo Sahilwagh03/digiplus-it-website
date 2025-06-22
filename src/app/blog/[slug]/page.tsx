@@ -9,8 +9,8 @@ interface BlogPostPageProps {
   };
 }
 
-export async function generateStaticParams() {
-  const slugs = await getAllSlugs('blog');
+export function generateStaticParams() {
+  const slugs = getAllSlugs('blog');
   return slugs.map((slug) => ({
     slug,
   }));

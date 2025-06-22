@@ -9,8 +9,8 @@ interface CaseStudyPageProps {
   };
 }
 
-export async function generateStaticParams() {
-  const slugs = await getAllSlugs('case-study');
+export function generateStaticParams() {
+  const slugs = getAllSlugs('case-study');
   return slugs.map((slug) => ({
     slug,
   }));
