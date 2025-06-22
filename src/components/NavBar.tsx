@@ -27,7 +27,7 @@ const NavBar = (props: Props) => {
         >
           {/* Logo */}
           <div className="flex-1">
-            <Link href="#top-of-the-page">
+            <Link href="/">
               <div className="flex items-center">
                 <h3 className="font-primary text-5xl text-primary-red">DIGI</h3>
                 <h3 className="font-primary text-5xl text-primary-blue">PLUS</h3>
