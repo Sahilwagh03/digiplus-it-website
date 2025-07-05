@@ -6,11 +6,11 @@ export const HomeConstant = {
   PartnerSection: {
     title: [
       { text: 'TRUSTED BY', highlight: false },
-      { text: 'TELECOM CLIENTS', highlight: true },
+      { text: 'PARTENERS', highlight: true },
       { text: 'WORLDWIDE', highlight: false }
     ],
     description:
-      'We are proud to count among our customers global leaders who trust us to optimize the management of their data and transform their operations through innovative solutions.',
+      'Partnered with organizations worldwide to drive innovation and trust. Our clients include leading telecom operators, technology giants, and digital pioneers.',
     partners: [
       {
         alt: 'Odido',
@@ -44,11 +44,11 @@ export const HomeConstant = {
   },
   TelecomExpertiseSection: {
     title: [
-      { text: 'Telecom Solutions', highlight: false },
-      { text: 'Expertise', highlight: true },
+      { text: 'TRUSTED BY', highlight: false },
+      { text: 'TELECOM CLIENTS', highlight: true },
     ],
     description:
-      'Trusted by top telecom operators across Europe',
+      'We are proud to count among our customers global leaders who trust us to optimize the management of their data and transform their operations through innovative solutions.',
     features: [
       {
         icon: FaNetworkWired,

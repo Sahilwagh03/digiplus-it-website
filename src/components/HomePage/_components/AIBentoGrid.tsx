@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 import React from 'react';
 
 const steps = [
@@ -42,19 +43,21 @@ const steps = [
 
 export default function AIBentoGrid() {
   return (
-    <div className="font-oswald grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-3 p-4 md:p-8 text-white">
+    <div className="max-w-7xl mx-auto font-oswald grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-3 p-4 md:p-8 text-white">
       {/* Hero Card */}
       <div className="col-span-1 md:col-span-2 lg:row-span-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl relative p-4 flex flex-col justify-between h-full">
         <h2 className="font-primary text-lg md:text-xl font-semibold">
           Unlocking the Power of AI
         </h2>
-        <p className="text-sm text-white/80 mt-3 font-medium">
+
+        <div className="text-[4rem] md:text-[20rem] font-black text-white/20 leading-none -mt-2 mb-1 select-none">
+          AI
+        </div>
+
+        <p className="text-sm text-white/80 font-medium">
           Our AI services empower enterprises to leverage data, drive innovation,
           and operate intelligently through smart governance and execution.
         </p>
-        <div className="text-[4rem] md:text-[6rem] font-black text-white/10 absolute right-4 bottom-0 pointer-events-none">
-          AI
-        </div>
       </div>
 
       {/* Steps */}
