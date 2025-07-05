@@ -8,8 +8,8 @@ interface RecentCaseStudiesProps {
 
 export default function RecentCaseStudies({ caseStudies }: RecentCaseStudiesProps) {
   return (
-    <section className="py-20 bg-white">
-      <div className="container-1280">
+    <section className="py-20 px-10 bg-white">
+      <div className="w-full">
         <div className="text-center mb-16">
           <h2 className="font-primary text-4xl md:text-6xl lg:text-7xl font-normal uppercase tracking-[-0.01em] leading-[0.875] text-black mb-6">
             Recent <span className="text-primary-blue">Case Studies</span>

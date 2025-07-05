@@ -8,8 +8,8 @@ interface RecentBlogPostsProps {
 
 export default function RecentBlogPosts({ blogPosts }: RecentBlogPostsProps) {
   return (
-    <section className="py-20 bg-blue-variant">
-      <div className="container-1280">
+    <section className="py-20 px-10 bg-blue-variant">
+      <div className="w-full">
         <div className="text-center mb-16">
           <h2 className="font-primary text-4xl md:text-6xl lg:text-7xl font-normal uppercase tracking-[-0.01em] leading-[0.875] text-black mb-6">
             Latest <span className="text-primary-blue">Insights</span>
