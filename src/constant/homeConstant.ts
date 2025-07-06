@@ -1,6 +1,5 @@
 
-import { title } from "process";
-import { FaNetworkWired, FaPuzzlePiece, FaCogs, FaHandshake } from "react-icons/fa";
+import { FaNetworkWired, FaPuzzlePiece, FaCogs, FaHandshake, FaSyncAlt, FaUserAlt, FaBolt } from "react-icons/fa";
 
 export const HomeConstant = {
   PartnerSection: {
@@ -39,6 +38,41 @@ export const HomeConstant = {
       {
         alt: 'Windtre',
         imageUrl: 'https://digiplus.co.in/wp-content/uploads/2022/03/windtre-logo-dsk.png'
+      }
+    ]
+  },
+  OurWorkingModelSection: {
+    title: [
+      { text: 'OUR', highlight: false },
+      { text: 'DYNAMIC', highlight: true },
+      { text: 'MODEL', highlight: false }
+    ],
+    description:
+      'We integrate innovation and collaboration into a fluid, adaptive process, crafting bespoke solutions that drive tangible results and lasting success for your business.',
+    features: [
+      {
+        icon: FaBolt,
+        title: 'Deep Domain Expertise',
+        description:
+          'Bringing unmatched subject matter expertise to deliver insights and solutions grounded in industry knowledge.'
+      },
+      {
+        icon: FaSyncAlt,
+        title: 'Agile & Adaptive',
+        description:
+          'With a flexible mindset, we embrace change and rapidly adapt to evolving requirements to deliver timely, relevant outcomes.'
+      },
+      {
+        icon: FaHandshake,
+        title: 'Strategic Collaboration',
+        description:
+          'We work hand-in-hand with clients as strategic partners, fostering trust and transparency at every step.'
+      },
+      {
+        icon: FaUserAlt, // Or FaUserCheck / FaUsers for better representation
+        title: 'Customer-Centric Solutions',
+        description:
+          'Our solutions are thoughtfully crafted around your specific needs, ensuring relevance, value, and measurable impact.'
       }
     ]
   },

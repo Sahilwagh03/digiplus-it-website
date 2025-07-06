@@ -5,8 +5,11 @@ import HowWeOperate from './_components/HowWeOperate'
 import RecentCaseStudies from './_components/RecentCaseStudies'
 import RecentBlogPosts from './_components/RecentBlogPosts'
 import { getRecentContent } from '@/lib/mdx'
-import TelecomExpertise from './_components/TelecomExpertise'
 import DiverseClientPortfolio from './_components/DiverseClientPortfolio'
+import OurWorkingModels from './_components/OurWorkingModel'
+import TelecomExpertise from './_components/TelecomExpertise'
+
+
 
 type Props = {}
 
@@ -18,6 +21,7 @@ const HomePage = async (props: Props) => {
     <div className='page-wrapper bg-blue-variant partner h-auto'>
         <Hero/>
         <Partner/>
+        <OurWorkingModels/>
         <TelecomExpertise/>
         <HowWeOperate/>
         <DiverseClientPortfolio/>
