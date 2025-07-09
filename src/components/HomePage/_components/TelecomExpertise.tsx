@@ -34,7 +34,7 @@ function TelecomExpertise() {
       <div className='max-w-7xl mx-auto relative z-10 min-h-[550px] md:min-h-[600px] lg:min-h-[800px]'>
         {/* Headline and Description */}
         <div className='text-center font-primary mb-12 lg:mb-0 max-w-4xl mx-auto relative z-20'>
-          <h2 className='font-primary text-xl md:text-2xl lg:text-4xl font-bold flex gap-x-2 justify-center'>
+          <h2 className='font-primary  text-xl md:text-2xl lg:text-4xl font-bold flex flex-col lg:flex-row gap-x-2 justify-center'>
             {title.map((part, index) => (
               <span
                 key={index}

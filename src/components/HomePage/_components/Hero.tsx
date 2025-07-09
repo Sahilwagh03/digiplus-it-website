@@ -11,7 +11,7 @@ const Hero = (props: Props) => {
                     {/* Image */}
                 </div>
                 <div className="lg:pt-10 text-left  lg:text-center justify-start lg:justify-items-center lg:place-content-center lg:items-center wrapper-hero-content h-auto lg:h-full">
-                    <h1 className="font-primary tracking-[-0.01em] uppercase font-normal leading-[0.875] text-[clamp(3.5rem,calc(1rem+7vw),7rem)] [text-wrap:balance] mt-0 mb-0">
+                    <h1 className="font-primary tracking-[-0.01em] uppercase leading-[0.875] text-[clamp(1.5rem,calc(1rem+4vw),4.5rem)] font-semibold [text-wrap:balance] mt-0 mb-0">
                         Crafting Future‑Ready Platforms for <span className='text-primary-blue'>Telecom</span> & <span className='text-primary-blue'>Analytics</span>
                     </h1>
                     <div className='font-third lg:max-w-[800px] mx-auto'>
