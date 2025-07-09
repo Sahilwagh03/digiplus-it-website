@@ -28,7 +28,7 @@ function TelecomExpertise() {
 
   return (
     <section
-      className='bg-blue-variant py-10 px-6 md:px-10 w-full relative overflow-hidden'
+      className='bg-white py-10 px-6 md:px-10 w-full relative overflow-hidden'
       id='our-working-model'
     >
       <div className='max-w-7xl mx-auto relative z-10 min-h-[550px] md:min-h-[600px] lg:min-h-[800px]'>

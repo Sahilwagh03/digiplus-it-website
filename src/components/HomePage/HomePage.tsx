@@ -21,10 +21,10 @@ const HomePage = async (props: Props) => {
     <div className='page-wrapper bg-blue-variant partner h-auto'>
         <Hero/>
         <Partner/>
-        <OurWorkingModels/>
         <TelecomExpertise/>
-        <HowWeOperate/>
         <DiverseClientPortfolio/>
+        <OurWorkingModels/>
+        <HowWeOperate/>
         {/* Recent Case Studies */}
         <RecentCaseStudies caseStudies={recentCaseStudies} />
         

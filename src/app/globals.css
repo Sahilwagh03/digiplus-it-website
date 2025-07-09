@@ -251,3 +251,47 @@ li {
 .fade-in-up {
   animation: fadeInUp 0.5s ease-out forwards;
 }
+
+
+/* Ray glass shimmer effect */
+.card-glass-hover {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-glass-hover::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  transform: translateX(-100%);
+  pointer-events: none;
+  opacity: 0;
+}
+
+.card-glass-hover:hover::before {
+  animation: shimmer-once 0.8s ease-out forwards;
+  opacity: 1;
+}
+
+@keyframes shimmer-once {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateX(200%);
+    opacity: 0;
+  }
+}
