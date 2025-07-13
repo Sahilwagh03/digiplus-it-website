@@ -2,55 +2,8 @@
 @layer theme, base, components, utilities;
 
 @font-face {
-  font-family: 'Kassiclassic';
-  src: url('https://cdn.prod.website-files.com/666816b02d4f3deb68a0d625/6668893993747a31b278a70c_KassiClassic.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Urbanist';
-  src: url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Aktivgrotesk';
-  src: url('https://cdn.prod.website-files.com/666816b02d4f3deb68a0d625/66688979b500c07cc6722831_AktivGrotesk-Light.otf') format('opentype');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Aktivgrotesk';
-  src: url('https://cdn.prod.website-files.com/666816b02d4f3deb68a0d625/66688979c4054952a579f6fe_AktivGrotesk-Medium.otf') format('opentype');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Aktivgrotesk';
-  src: url('https://cdn.prod.website-files.com/666816b02d4f3deb68a0d625/666ab3862bc41bb2eac57814_AktivGrotesk-Regular.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  src: url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Lato';
-  src: url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+  font-family: 'Inter';
+  src: url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
   font-style: normal;
   font-display: swap;
 }
@@ -58,10 +11,10 @@
 /* Tailwind 4.1 @theme block */
 @theme {
   /* --font-primary: 'Kassiclassic', Impact, sans-serif; */
-  --font-primary: 'Montserrat', sans-serif;
+  --font-primary: 'Antonio', sans-serif;
   --font-secondary: 'Urbanist', 'sans-serif';
   /* --font-third: Arial, Helvetica, sans-serif; */
-  --font-third: 'Lato', sans-serif;
+  --font-third: 'Inter', sans-serif;
 
   --color-primary-blue: #3d82f4;
   --color-primary-red: #ea4234;
@@ -174,9 +127,9 @@ h1 {
 h2 {
   text-transform: uppercase;
   font-weight: 700;
-  line-height: .875;
+  line-height: 1;
   /* font-size: clamp(2.5rem, calc(1rem + 6vw), 5rem); */
-  font-size: clamp(0.75rem, calc(1rem + 4vw), 3rem);
+  font-size: clamp(1.5rem, calc(1rem + 5vw), 3.5rem);
   text-wrap: pretty;
   margin-top: 0;
   margin-bottom: 0;
@@ -319,3 +272,4 @@ li {
     opacity: 0;
   }
 }
+

@@ -45,7 +45,7 @@ const OurWorkingModels = () => {
                 <h3 className="font-primary text-xl font-semibold group-hover:text-primary-blue text-gray-800 mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-gray-600 mt-2 text-sm leading-relaxed">
                   {feature.description}
                 </p>
               </div>

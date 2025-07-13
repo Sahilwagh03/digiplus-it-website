@@ -8,13 +8,13 @@ interface RecentBlogPostsProps {
 
 export default function RecentBlogPosts({ blogPosts }: RecentBlogPostsProps) {
   return (
-    <section className="py-20 px-10 bg-blue-variant">
+    <section className="py-5 px-4 lg:py-20 lg:px-10 bg-blue-variant">
       <div className="w-full">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 lg:mb-16">
           <h2 className="font-primary text-4xl md:text-6xl lg:text-7xl font-normal uppercase tracking-[-0.01em] leading-[0.875] text-black mb-6">
             Latest <span className="text-primary-blue">Insights</span>
           </h2>
-          <p className="font-third text-md md:text-xl lg:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+          <p className="font-third text-md md:text-lg lg:text-xl text-gray-700 max-w-4xl mt-4 mx-auto leading-relaxed">
             Stay updated with our latest thoughts and insights on technology, business, and innovation.
           </p>
         </div>
@@ -31,7 +31,7 @@ export default function RecentBlogPosts({ blogPosts }: RecentBlogPostsProps) {
           </div>
         )}
 
-        <div className="text-center mt-16">
+        <div className="text-center mt-8 lg:mt-16">
           <Link
             href="/blog"
             className="inline-flex items-center px-6 py-3 text-sm font-medium text-primary-blue hover:text-blue-800 transition-colors font-third"

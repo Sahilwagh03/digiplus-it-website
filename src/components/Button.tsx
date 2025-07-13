@@ -7,7 +7,7 @@ type Props = {
 const Button = ({ children }: Props) => {
   return (
     <button
-      className="relative w-36 h-12 bg-white text-black text-lg font-semibold rounded-sm overflow-hidden z-10 group transition-colors duration-300 hover:text-white
+      className="relative w-36 h-12 font-primary bg-white text-black text-xl font-semibold rounded-sm overflow-hidden z-10 group transition-colors duration-300 hover:text-white
       [clip-path:polygon(0_0,100%_0,100%_calc(100%-0.75rem),calc(100%-0.75rem)_100%,0_100%)]
       [-webkit-clip-path:polygon(0_0,100%_0,100%_calc(100%-0.75rem),calc(100%-0.75rem)_100%,0_100%)]"
     >

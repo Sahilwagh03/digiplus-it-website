@@ -24,15 +24,12 @@ const DiverseClientPortfolio = () => {
           <h2 className="font-primary text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
             {title} <span className="text-primary-blue">{subtitle}</span>
           </h2>
-          <p className="font-third text-md pt-2 lg:pt-0 md:text-xl max-w-xl mx-auto lg:mx-0 border-b pb-6 border-black/20">
+          <p className="font-third text-md md:text-lg lg:text-xl text-gray-700 max-w-2xl mt-4 mx-auto lg:mx-0 border-b pb-6 border-black/20">
             {description}
           </p>
 
           {activeClient && (
-            <div
-              key={activeIndex}
-              className="fade-in-up"
-            >
+            <div key={activeIndex} className="fade-in-up">
               <div className="text-center lg:text-left flex justify-center lg:justify-start items-center gap-4">
                 <div className="relative w-14 h-14">
                   <Image
@@ -42,7 +39,9 @@ const DiverseClientPortfolio = () => {
                     className="object-contain"
                   />
                 </div>
-                <h3 className="font-primary text-3xl font-semibold">{activeClient.name}</h3>
+                <h3 className="font-primary text-3xl font-semibold">
+                  {activeClient.name}
+                </h3>
               </div>
               <p className="font-third text-sm uppercase tracking-wide text-primary-blue font-bold mt-2">
                 {activeClient.industry || 'Technology'}
@@ -54,29 +53,52 @@ const DiverseClientPortfolio = () => {
           )}
         </div>
 
-        {/* Right Side: Circular Logos */}
-        <div className="flex-1 flex justify-center">
-          <Collaboration>
-            <CentralIcon
-              icon={activeClient.logo}
-              alt={activeClient.name}
-              width={64}
-              height={64}
-            />
-            <CollabIconContainer>
-              {diverseClients.map((client, index) => (
-                <CollabIcon
-                  key={index}
-                  index={index}
-                  icon={client.logo}
-                  width={40}
-                  height={40}
-                  alt={client.name}
-                  onClick={() => setActiveIndex(index)}
-                />
-              ))}
-            </CollabIconContainer>
-          </Collaboration>
+        {/* Right Side */}
+        <div className="flex-1 w-full">
+          {/* Grid Layout for Mobile & Tablet */}
+          <div className="grid grid-cols-3 sm:grid-cols-4 gap-4 justify-items-center lg:hidden">
+            {diverseClients.map((client, index) => (
+              <div
+                key={index}
+                onClick={() => setActiveIndex(index)}
+                className="w-24 h-24 p-2 bg-white/80 rounded-xl cursor-pointer transition-transform duration-300 hover:scale-105"
+              >
+                <div className="relative w-full h-full">
+                  <Image
+                    src={client.logo}
+                    alt={client.name}
+                    fill
+                    className="object-contain rounded-xl"
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Circular Layout for Desktop */}
+          <div className="hidden lg:flex justify-center">
+            <Collaboration>
+              <CentralIcon
+                icon={activeClient.logo}
+                alt={activeClient.name}
+                width={64}
+                height={64}
+              />
+              <CollabIconContainer>
+                {diverseClients.map((client, index) => (
+                  <CollabIcon
+                    key={index}
+                    index={index}
+                    icon={client.logo}
+                    width={40}
+                    height={40}
+                    alt={client.name}
+                    onClick={() => setActiveIndex(index)}
+                  />
+                ))}
+              </CollabIconContainer>
+            </Collaboration>
+          </div>
         </div>
       </div>
     </section>

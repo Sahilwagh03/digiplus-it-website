@@ -8,13 +8,13 @@ interface RecentCaseStudiesProps {
 
 export default function RecentCaseStudies({ caseStudies }: RecentCaseStudiesProps) {
   return (
-    <section className="py-20 px-10 bg-white">
+    <section className="py-5 px-4 lg:py-20 lg:px-10 bg-white">
       <div className="w-full">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 lg:mb-16">
           <h2 className="font-primary text-4xl md:text-6xl lg:text-7xl font-normal uppercase tracking-[-0.01em] leading-[0.875] text-black mb-6">
             Recent <span className="text-primary-blue">Case Studies</span>
           </h2>
-          <p className="font-third text-md md:text-xl lg:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+          <p className="font-third text-md md:text-lg lg:text-xl text-gray-700 max-w-4xl mt-4 mx-auto leading-relaxed">
             Discover how we've helped businesses achieve their goals through innovative solutions and digital transformation.
           </p>
         </div>
@@ -31,7 +31,7 @@ export default function RecentCaseStudies({ caseStudies }: RecentCaseStudiesProp
           </div>
         )}
 
-        <div className="text-center mt-16">
+        <div className="text-center mt-8 lg:mt-16">
           <Link
             href="/case-study"
             className="inline-flex items-center px-6 py-3 text-sm font-medium text-primary-blue hover:text-blue-800 transition-colors font-third"
