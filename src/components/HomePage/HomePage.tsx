@@ -23,12 +23,9 @@ const HomePage = async (props: Props) => {
         <Partner/>
         <TelecomExpertise/>
         <DiverseClientPortfolio/>
-        <OurWorkingModels/>
         <HowWeOperate/>
-        {/* Recent Case Studies */}
+        <OurWorkingModels/>
         <RecentCaseStudies caseStudies={recentCaseStudies} />
-        
-        {/* Recent Blog Posts */}
         <RecentBlogPosts blogPosts={recentBlogPosts} />
     </div>
   )

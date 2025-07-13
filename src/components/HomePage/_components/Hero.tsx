@@ -23,7 +23,7 @@ const Hero = () => {
     tl.fromTo(iconRef.current, { opacity: 0 }, { opacity: 1 });
 
     // 2. Animate heading, para, button
-    tl.fromTo(headingRef.current, { y: 50, opacity: 0 }, { y: 0, opacity: 1 })
+    tl.fromTo(headingRef.current, { y: 50, opacity: 0 }, { y: 0, opacity: 1 }, '-=0.5')
       .fromTo(paraRef.current, { y: 30, opacity: 0 }, { y: 0, opacity: 1 }, '-=0.6')
       .fromTo(buttonRef.current, { y: 20, opacity: 0 }, { y: 0, opacity: 1 }, '-=0.5');
 
