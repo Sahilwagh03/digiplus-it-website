@@ -38,12 +38,12 @@ const NavBar = (props: Props) => {
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex px-4 flex-auto justify-center items-center font-normal relative">
-            <div className="font-third wrapper-nav-link-1 flex gap-x-6">
+            <div className="wrapper-nav-link-1 flex gap-x-6">
               {navLinks.map(({ href, label }) => (
                 <Link
                   key={href}
                   href={href}
-                  className="text-lg nav-link w-nav-link hover:text-primary-blue transition-colors duration-200 ease-in-out"
+                  className="text-xl nav-link w-nav-link hover:text-primary-blue transition-colors duration-200 ease-in-out"
                 >
                   {label}
                 </Link>
@@ -53,7 +53,7 @@ const NavBar = (props: Props) => {
 
           {/* Desktop Contact */}
           <div className="hidden lg:flex flex-1 justify-end items-center gap-x-6 mr-2">
-            <Link href="#" className="text-lg hover:text-primary-blue transition-colors duration-200 ease-in-out">
+            <Link href="#" className="text-xl hover:text-primary-blue transition-colors duration-200 ease-in-out">
               Contact
             </Link>
           </div>

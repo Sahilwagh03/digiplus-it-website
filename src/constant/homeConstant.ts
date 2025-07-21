@@ -174,5 +174,55 @@ export const HomeConstant = {
         industry: "Enterprise / EdTech"
       }
     ]
-  }
+  },
+  CallToActionSection: {
+    title: [
+      { text: 'Ready to', highlight: false },
+      { text: 'Transform', highlight: true },
+      { text: 'Your Business?', highlight: false }
+    ],
+    description:
+      'Let’s build future-ready platforms together. Connect with DigiPlus IT to unlock innovation, agility, and measurable results for your enterprise.',
+    buttonText: 'COnnect With Us',
+    buttonLink: '/contact',
+  },
+  FooterSection: {
+    brand: 'DigiPlus IT',
+    logo: '/logo.svg', // Place your logo in public folder or use a URL
+    links: [
+      {
+        title: 'Company',
+        items: [
+          { label: 'About Us', href: '/#about-us' },
+          { label: 'Careers', href: '/#careers' },
+          { label: 'Contact', href: '/contact' },
+          { label: 'Blog', href: '/blog' },
+        ],
+      },
+      {
+        title: 'Expertise',
+        items: [
+          { label: 'Telecom Solutions', href: '/#expertise' },
+          { label: 'AI & Analytics', href: '/#solutions' },
+          { label: 'Case Studies', href: '/case-study' },
+          { label: 'Partners', href: '/#partners' },
+        ],
+      },
+      {
+        title: 'Legal',
+        items: [
+          { label: 'Privacy Policy', href: '/privacy-policy' },
+          { label: 'Terms & Conditions', href: '/terms' },
+        ],
+      },
+    ],
+    socialLinks: [
+      { icon: 'FaFacebookF', href: '#' },
+      { icon: 'FaDiscord', href: '#' },
+      { icon: 'FaTwitter', href: '#' },
+      { icon: 'FaGithub', href: '#' },
+      { icon: 'FaDribbble', href: '#' },
+    ],
+    copyright: '© {year} DigiPlus IT. All Rights Reserved.',
+  },
 };
