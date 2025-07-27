@@ -226,3 +226,21 @@ export const HomeConstant = {
     copyright: '© {year} DigiPlus IT. All Rights Reserved.',
   },
 };
+
+export const positionConfig = [
+  {
+    rotate: 'rotate-1',
+    bg: 'bg-primary-green',
+    hoverText: 'group-hover:text-primary-green',
+  },
+  {
+    rotate: '-rotate-1',
+    bg: 'bg-primary-blue',
+    hoverText: 'group-hover:text-primary-blue',
+  },
+  {
+    rotate: 'rotate-2',
+    bg: 'bg-primary-red',
+    hoverText: 'group-hover:text-primary-red',
+  },
+];

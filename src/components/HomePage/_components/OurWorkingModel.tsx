@@ -1,4 +1,25 @@
+"use client";
 import { HomeConstant } from "@/constant/homeConstant";
+import { easeOut, motion } from "framer-motion";
+
+const containerVariants = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: easeOut },
+  },
+};
 
 const OurWorkingModels = () => {
   const { title, description, features } = HomeConstant.OurWorkingModelSection;
@@ -10,7 +31,13 @@ const OurWorkingModels = () => {
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center font-primary mb-16 max-w-3xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="text-center font-primary mb-16 max-w-3xl mx-auto"
+        >
           <h2 className="font-primary text-3xl md:text-4xl lg:text-5xl font-bold flex justify-center flex-wrap gap-x-2">
             {title.map((part, index) => (
               <span
@@ -24,18 +51,27 @@ const OurWorkingModels = () => {
           <p className="font-third text-gray-500 mt-3 text-base md:text-lg">
             {description}
           </p>
-        </div>
+        </motion.div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
           {features.map((feature, index) => {
             const Icon = feature.icon;
             const isLastSingleCard = features.length === 4 && index === 3;
 
             return (
-              <div
+              <motion.div
                 key={index}
-                className={`bg-white border border-gray-100 rounded-xl p-6 shadow-sm hover:shadow-xl transform hover:-translate-y-2 transition duration-300 ease-in-out group
+                variants={cardVariants}
+                whileHover={{ y: -6, scale: 1.02 }}
+                transition={{ type: "spring", stiffness: 200, damping: 20 }}
+                className={`bg-white border border-gray-100 rounded-xl p-6 shadow-sm group transition-shadow duration-300 ease-in-out
                 ${isLastSingleCard ? "lg:col-start-2" : ""}
               `}
               >
@@ -48,10 +84,10 @@ const OurWorkingModels = () => {
                 <p className="text-gray-600 mt-2 text-sm leading-relaxed">
                   {feature.description}
                 </p>
-              </div>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
