@@ -24,7 +24,7 @@ const CallToAction = () => {
 
   return (
     <section className="relative bg-gradient-to-r from-primary-blue to-blue-800 py-20 px-6 w-full text-center flex flex-col items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 bg-primary-blue/70 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 bg-prifmary-blue/70 backdrop-blur-sm"></div>
 
       <motion.div
         className="relative z-10 max-w-5xl mx-auto"

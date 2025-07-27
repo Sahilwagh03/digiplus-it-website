@@ -9,20 +9,6 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-blue-variant">
-      {/* Hero Section */}
-      <section className="bg-white py-16">
-        <div className="container-1280">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="font-primary text-4xl md:text-5xl font-normal uppercase tracking-[-0.01em] leading-[0.875] text-black mb-6">
-              Get in <span className="text-primary-blue">Touch</span>
-            </h1>
-            <p className="font-third text-md md:text-lg text-gray-700">
-              Ready to transform your business? Let's discuss how we can help you achieve your goals.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Contact Form Section */}
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto">
@@ -34,25 +20,27 @@ export default function ContactPage() {
                   Let's Start a Conversation
                 </h2>
                 <p className="font-third text-gray-600 mb-8">
-                  Whether you have a project in mind or just want to learn more about our services, 
+                  Whether you have a project in mind or just want to learn more about our services,
                   we'd love to hear from you.
                 </p>
-                
+
                 <div className="space-y-6">
                   <div>
                     <h3 className="font-primary text-lg font-semibold mb-2">Email</h3>
-                    <p className="font-third text-gray-600">info@digiplus-it.com</p>
+                    <p className="font-third text-gray-600">salesmanager@digiplusit.com</p>
                   </div>
                   <div>
                     <h3 className="font-primary text-lg font-semibold mb-2">Phone</h3>
-                    <p className="font-third text-gray-600">+1 (555) 123-4567</p>
+                    <p className="font-third text-gray-600">+91 816-926-3650
+                    </p>
                   </div>
                   <div>
                     <h3 className="font-primary text-lg font-semibold mb-2">Address</h3>
                     <p className="font-third text-gray-600">
-                      123 Innovation Drive<br />
-                      Tech City, TC 12345<br />
-                      United States
+                      DigiPlus IT, #701
+                      Senate Aura Biplex, Shashtri Nagar
+                      S.V. Road, Borivali West
+                      Mumbai, Maharashtra 400092
                     </p>
                   </div>
                 </div>
@@ -87,7 +75,7 @@ export default function ContactPage() {
                       />
                     </div>
                   </div>
-                  
+
                   <div>
                     <label htmlFor="email" className="block font-third text-sm font-medium text-gray-700 mb-2">
                       Email
@@ -100,7 +88,7 @@ export default function ContactPage() {
                       placeholder="john.doe@company.com"
                     />
                   </div>
-                  
+
                   <div>
                     <label htmlFor="company" className="block font-third text-sm font-medium text-gray-700 mb-2">
                       Company
@@ -113,7 +101,7 @@ export default function ContactPage() {
                       placeholder="Your Company"
                     />
                   </div>
-                  
+
                   <div>
                     <label htmlFor="message" className="block font-third text-sm font-medium text-gray-700 mb-2">
                       Message
@@ -126,10 +114,10 @@ export default function ContactPage() {
                       placeholder="Tell us about your project or how we can help..."
                     ></textarea>
                   </div>
-                  
+
                   <button
                     type="submit"
-                    className="w-full bg-primary-blue text-white font-primary text-lg font-semibold py-3 px-6 rounded-lg hover:bg-primary-blue/90 transition-colors duration-200"
+                    className="w-full cursor-pointer bg-primary-blue text-white font-primary text-lg font-semibold py-3 px-6 rounded-lg hover:bg-primary-blue/90 transition-colors duration-200"
                   >
                     Send Message
                   </button>
