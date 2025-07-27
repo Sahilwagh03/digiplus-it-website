@@ -7,11 +7,11 @@ import { IoCloseSharp } from 'react-icons/io5';
 type Props = {};
 
 const navLinks = [
-  { href: '#clients', label: 'Clients' },
-  { href: '#expertise', label: 'Expertise' },
-  { href: '#solutions', label: 'Solutions' },
-  { href: '#about-us', label: 'About us' },
   { href: '#partners', label: 'Partners' },
+  { href: '#expertise', label: 'Expertise' },
+  { href: '#clients', label: 'Clients' },
+  { href: '#solutions', label: 'Solutions' },
+  { href: '#working-model', label: 'Working Model' },
 ];
 
 const NavBar = (props: Props) => {
@@ -53,7 +53,7 @@ const NavBar = (props: Props) => {
 
           {/* Desktop Contact */}
           <div className="hidden lg:flex flex-1 justify-end items-center gap-x-6 mr-2">
-            <Link href="#" className="text-xl hover:text-primary-blue transition-colors duration-200 ease-in-out">
+            <Link href="/contact" className="text-xl hover:text-primary-blue transition-colors duration-200 ease-in-out">
               Contact
             </Link>
           </div>
@@ -88,7 +88,7 @@ const NavBar = (props: Props) => {
             </Link>
           ))}
           <Link
-            href="#"
+            href="/contact"
             className="text-2xl md:text-3xl text-white transition duration-200"
             onClick={() => setIsOpen(false)}
           >

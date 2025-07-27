@@ -193,19 +193,19 @@ export const HomeConstant = {
       {
         title: 'Company',
         items: [
-          { label: 'About Us', href: '/#about-us' },
-          { label: 'Careers', href: '/#careers' },
-          { label: 'Contact', href: '/contact' },
+          { label: 'Home', href: '/' },
           { label: 'Blog', href: '/blog' },
+          { label: 'Case Studies', href: '/case-study' },
+          { label: 'Contact', href: '/contact' },
         ],
       },
       {
-        title: 'Expertise',
+        title: 'Services',
         items: [
-          { label: 'Telecom Solutions', href: '/#expertise' },
-          { label: 'AI & Analytics', href: '/#solutions' },
-          { label: 'Case Studies', href: '/case-study' },
           { label: 'Partners', href: '/#partners' },
+          { label: 'Expertise', href: '/#expertise' },
+          { label: 'Clients', href: '/#clients' },
+          { label: 'Solutions', href: '/#solutions' },
         ],
       },
       {

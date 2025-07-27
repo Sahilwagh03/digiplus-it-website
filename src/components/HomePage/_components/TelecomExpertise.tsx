@@ -47,7 +47,7 @@ function TelecomExpertise() {
   return (
     <motion.section
       className='bg-white py-10 px-6 md:px-10 w-full relative overflow-hidden'
-      id='our-working-model'
+      id='expertise'
       initial='hidden'
       whileInView='show'
       viewport={{ once: true, amount: 0.2 }}

@@ -27,7 +27,7 @@ const OurWorkingModels = () => {
   return (
     <section
       className="bg-white py-20 px-6 md:px-20 w-full relative overflow-hidden"
-      id="telecom-expertise"
+      id="working-model"
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}

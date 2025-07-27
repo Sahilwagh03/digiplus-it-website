@@ -17,7 +17,7 @@ const DiverseClientPortfolio = () => {
   const activeClient = diverseClients[activeIndex];
 
   return (
-    <section className="py-20 px-4 lg:px-16">
+    <section id="clients" className="py-20 px-4 lg:px-16">
       <div className="max-w-7xl mx-auto w-full flex flex-col lg:flex-row justify-between gap-12 items-center lg:items-start">
         {/* Left Side: Text + Dynamic Info */}
         <div className="flex-1 text-center lg:text-left space-y-6 transition-all duration-500 ease-in-out">

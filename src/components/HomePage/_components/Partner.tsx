@@ -40,6 +40,7 @@ const Partner = () => {
   return (
     <section
       ref={sectionRef}
+      id="partners"
       className="font-primary text-black py-12 text-left"
     >
       <div className="px-4 mx-auto max-w-6xl">
