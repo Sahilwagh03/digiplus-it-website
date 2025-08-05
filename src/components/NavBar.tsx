@@ -3,6 +3,7 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import { BiDotsVertical } from 'react-icons/bi';
 import { IoCloseSharp } from 'react-icons/io5';
+import { usePathname } from 'next/navigation';
 
 type Props = {};
 
@@ -16,6 +17,8 @@ const navLinks = [
 
 const NavBar = (props: Props) => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === '/';
 
   return (
     <>
@@ -39,15 +42,18 @@ const NavBar = (props: Props) => {
           {/* Desktop Nav */}
           <nav className="hidden lg:flex px-4 flex-auto justify-center items-center font-normal relative">
             <div className="wrapper-nav-link-1 flex gap-x-6">
-              {navLinks.map(({ href, label }) => (
-                <Link
-                  key={href}
-                  href={href}
-                  className="text-xl nav-link w-nav-link hover:text-primary-blue transition-colors duration-200 ease-in-out"
-                >
-                  {label}
-                </Link>
-              ))}
+              {navLinks.map(({ href, label }) => {
+                const finalHref = isHome ? href : `/${href}`;
+                return (
+                  <Link
+                    key={href}
+                    href={finalHref}
+                    className="text-xl nav-link w-nav-link hover:text-primary-blue transition-colors duration-200 ease-in-out"
+                  >
+                    {label}
+                  </Link>
+                );
+              })}
             </div>
           </nav>
 
@@ -69,24 +75,25 @@ const NavBar = (props: Props) => {
 
       {/* Mobile Menu (Always Mounted) */}
       <div
-        className={`
-          fixed top-0 left-0 w-full h-screen bg-primary-blue z-[995] 
-          flex flex-col items-start justify-start pt-24 px-6
-          transition-all duration-300 ease-in-out
-          ${isOpen ? 'translate-x-0 opacity-100 pointer-events-auto' : 'translate-x-full opacity-0 pointer-events-none'}
-        `}
+        className={`fixed top-0 left-0 w-full h-screen bg-primary-blue z-[995] 
+        flex flex-col items-start justify-start pt-24 px-6
+        transition-all duration-300 ease-in-out
+        ${isOpen ? 'translate-x-0 opacity-100 pointer-events-auto' : 'translate-x-full opacity-0 pointer-events-none'}`}
       >
         <nav className="flex flex-col w-full gap-y-6 text-left font-third">
-          {navLinks.map(({ href, label }) => (
-            <Link
-              key={href}
-              href={href}
-              className="text-2xl md:text-3xl text-white transition duration-200"
-              onClick={() => setIsOpen(false)}
-            >
-              {label}
-            </Link>
-          ))}
+          {navLinks.map(({ href, label }) => {
+            const finalHref = isHome ? href : `/${href}`;
+            return (
+              <Link
+                key={href}
+                href={finalHref}
+                className="text-2xl md:text-3xl text-white transition duration-200"
+                onClick={() => setIsOpen(false)}
+              >
+                {label}
+              </Link>
+            );
+          })}
           <Link
             href="/contact"
             className="text-2xl md:text-3xl text-white transition duration-200"

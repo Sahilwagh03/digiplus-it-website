@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-blue-variant">
+    <div className="min-h-[calc(100vh+6rem)] bg-blue-variant mt-[-6rem] flex justify-center items-center">
       {/* Contact Form Section */}
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto">
